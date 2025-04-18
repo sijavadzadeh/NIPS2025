@@ -1,6 +1,7 @@
 # Virtual environments
 venv/
-
+venv311/
+runs/
 # Cache files
 __pycache__/
 *.pyc
