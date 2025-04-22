@@ -1,7 +1,11 @@
 # Virtual environments
 venv/
 venv311/
+SinaVenv/
+
+# tensorboard files
 runs/
+
 # Cache files
 __pycache__/
 *.pyc
@@ -9,6 +13,9 @@ __pycache__/
 # Environment variables
 .env
 
-# OS-specifi
+# OS-specific
 .DS_Store
 Thumbs.db
+
+# My files 
+tempfiles/
