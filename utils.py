@@ -1,6 +1,8 @@
 import os
 import torch
 import warnings
+from datetime import datetime
+
 
 def get_data_directory():
     username = os.getlogin()
@@ -19,3 +21,8 @@ def get_device():
     if torch.cuda.is_available() == False:
         warnings.warn("⚠️ CUDA is not available. The model will run on CPU, which may be slower.", RuntimeWarning)
     return device
+
+def create_timestamped_logdir(base_dir="runs"):
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    log_dir = os.path.join(base_dir, f"siamese_{timestamp}")
+    return log_dir
